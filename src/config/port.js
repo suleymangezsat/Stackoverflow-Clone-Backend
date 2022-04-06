@@ -1,3 +1,5 @@
+const { json } = require("body-parser");
+
 // Normalize a port into a number, string, or false.
 exports.normalizePort = (val) => {
   const PORT = parseInt(val, 10);
@@ -21,7 +23,7 @@ exports.onError = (error) => {
   if (error.syscall !== 'listen') {
     throw error;
   }
-
+  JSON.stringify(error);
   const bind = typeof port === 'string' ? `Pipe ${port}` : `Port ${port}`;
 
   // handle specific listen errors with friendly messages
