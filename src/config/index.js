@@ -17,9 +17,9 @@ const getEnvVariable = (key) => {
 const config = {
   DB: {
     HOST: getEnvVariable('HOST'),
-    DB_USER: getEnvVariable('USER'),
+    DB_USER: getEnvVariable('DB_USER'),
     DATABASE: getEnvVariable('DATABASE'),
-    DB_PASSWORD: getEnvVariable('PASSWORD'),
+    DB_PASSWORD: getEnvVariable('DB_PASSWORD'),
   },
   JWT: {
     SECRET: getEnvVariable('JWT_SECRET'),
